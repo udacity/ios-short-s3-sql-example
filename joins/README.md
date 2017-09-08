@@ -1,6 +1,6 @@
-# JoinTester
+# Joins MySQL Example
 
-This repository can be used to experiment with MySQL queries — specifically JOINs. Experimentation can be done via a MySQL shell or by using the Swift MySQL client dependency in the `Package.swift` manifest file.
+Experiment with MySQL queries — specifically JOINs. Experimentation can be done via a MySQL shell or by using the Swift MySQL client dependency in the `Package.swift` manifest file.
 
 ## How to Use
 

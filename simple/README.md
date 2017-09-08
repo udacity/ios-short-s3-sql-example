@@ -1,6 +1,4 @@
-# SQL Example
-
-This repository can be used to create a simple MySQL database.
+# Simple MySQL Example
 
 ## How to Use
 
