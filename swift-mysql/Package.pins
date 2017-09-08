@@ -1,0 +1,18 @@
+{
+  "autoPin": true,
+  "pins": [
+    {
+      "package": "MySQL",
+      "reason": null,
+      "repositoryURL": "https://github.com/nicholasjackson/swift-mysql.git",
+      "version": "1.3.5"
+    },
+    {
+      "package": "swift-libmysql",
+      "reason": null,
+      "repositoryURL": "https://github.com/nicholasjackson/swift-libmysql",
+      "version": "0.1.0"
+    }
+  ],
+  "version": 1
+}
