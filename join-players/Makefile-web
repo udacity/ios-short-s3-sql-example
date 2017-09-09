@@ -1,7 +1,7 @@
 # dev (microservice) environment
 WEB_DOCKERFILE=Dockerfile-web
 WEB_IMAGE=kitura-server
-WEB_CONTAINER_NAME=join-database-server
+WEB_CONTAINER_NAME=join-players-server
 WEB_CONTAINER_PORT=8080
 WEB_HOST_PORT=80
 

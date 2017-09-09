@@ -1,0 +1,30 @@
+# dev (microservice) environment
+WEB_DOCKERFILE=Dockerfile-web
+WEB_IMAGE=kitura-server
+WEB_CONTAINER_NAME=join-dogs-server
+WEB_CONTAINER_PORT=8080
+WEB_HOST_PORT=80
+
+# =============================
+# Web (Microservice) Container
+# =============================
+web_dev:
+	docker run --name ${WEB_CONTAINER_NAME} \
+	-it --rm -v ${PWD}:/src \
+	-w /src \
+	-e MYSQL_HOST=${DB_HOST} \
+	-e MYSQL_PORT=${DB_PORT} \
+	-e MYSQL_USER=${DB_USER} \
+	-e MYSQL_PASSWORD=${DB_PASSWORD} \
+	-e MYSQL_DATABASE=${DB_DATABASE} \
+	-p ${WEB_HOST_PORT}:${WEB_CONTAINER_PORT} ${WEB_IMAGE} /bin/bash
+
+web_build:
+	swift build -Xlinker -L/usr/local/lib
+
+web_build_run: web_build
+	./.build/debug/UsersServer
+
+web_clean:
+	rm -rf .build
+	rm Package.pins

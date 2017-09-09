@@ -1,10 +1,10 @@
 # db environment
 DB_DOCKERFILE=Dockerfile-db
 DB_IMAGE=mysql-database
-DB_CONTAINER_NAME=join-database
+DB_CONTAINER_NAME=join-players
 DB_DATA_DIR=${PWD}/Data
 DB_SEED_DIR=${PWD}/Seed
-DB_DATABASE=join_database
+DB_DATABASE=join_players
 DB_SEED_FILE=/Seed/${DB_CONTAINER_NAME}.sql
 DB_CONTAINER_ID=$(shell docker ps -aq -f 'name=${DB_CONTAINER_NAME}')
 DB_HOST=$(shell docker inspect --format '{{ .NetworkSettings.IPAddress }}' ${DB_CONTAINER_ID})
